@@ -187,24 +187,25 @@ if 'bids' in proc_steps:
             			runValue=run[0].split('-')[1]
             			entities['run']=runValue
 
-            		files = layout.get(return_type='file', **entities)
-            		if files:
-            			sourcefile = files[0]
-            			entities = layout.parse_file_entities(sourcefile)
-            			entities['extension'] = 'json'
-            			files = layout.get(return_type='file', **entities)
-            			if files:
-            				sourcejson = files[0]
-            			else:
-            				sourcejson = None
-            		else:
-            			sourcefile = None
-
             	except KeyError:
             		customLabels= None
             		entities['subject']=subject
             		if session_label != "nosession":
             			entities['session']=session_label
+
+            	files = layout.get(return_type='file', **entities)
+            	if files:
+            		sourcefile = files[0]
+            		entities = layout.parse_file_entities(sourcefile)
+            		entities['extension'] = 'json'
+            		files = layout.get(return_type='file', **entities)
+            		if files:
+            			sourcejson = files[0]
+            		else:
+            			sourcejson = None
+            	else:
+            		sourcefile = None
+
 
             	try:
             		destination = item["destination"]
