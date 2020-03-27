@@ -26,7 +26,7 @@ docker run  --rm -v $PWD:/mnt                 \
 ```
 
 # Usage of dcm2bids and dcm2niix directly
-Alternatively users can ignore bidsconvert.py and directly call dcm2bids or dcm2niix directly within the container. Simply replace bidsconvert.py in the commad call above with the command you prefer instead.
+Alternatively users can ignore bidsconvert.py and call dcm2bids or dcm2niix directly within the container. Simply replace bidsconvert.py in the command call above with the command you prefer instead.
 
 Example running dcm2bids help
 ```
