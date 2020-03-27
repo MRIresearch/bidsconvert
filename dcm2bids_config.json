@@ -1,0 +1,27 @@
+{
+    "descriptions": [
+        {
+        "dataType": "func",
+        "modalityLabel": "bold",
+        "customLabels": "task-rest",
+        "criteria": {
+            "SeriesDescription": "Resting"
+            }
+        },
+        {
+        "dataType": "dwi",
+        "modalityLabel": "dwi",
+        "criteria": {
+            "SeriesDescription": "DTI_MB_3SHELL"
+            }
+        },
+		{
+        "dataType": "anat",
+        "modalityLabel": "T1w",
+        "criteria": {
+            "SeriesDescription": "T1_mprage_1mm"
+            }
+        }
+		
+    ]
+}

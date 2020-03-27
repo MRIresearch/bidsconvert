@@ -1,0 +1,30 @@
+{
+    "copy": [
+       {
+        "dataType": "anat",
+        "modalityLabel": "T1w",
+        "destination": {
+            "modalityLabel": "FLAIR",
+            "customLabels": "acq-nd"
+            }
+        },
+        {
+        "dataType": "func",
+        "modalityLabel": "bold",
+        "customLabels": "task-momo",
+        "destination": {
+            "modalityLabel": "sbref",
+            "customLabels": "task-dummy"
+            }
+        },
+        {
+        "dataType": "anat",
+        "modalityLabel": "T1w",
+        "destination": {
+            "modalityLabel": "FLAIR",
+            "customLabels": "acq-nd"
+            }
+        }
+		
+    ]
+}
