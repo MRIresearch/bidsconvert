@@ -2,6 +2,10 @@
 Docker image for converting DICOMS to BIDS format using dcm2bids version 2.1.4 (https://github.com/cbedetti/Dcm2Bids/)
 
 # Usage of bidsconvert.py
+The current docker image can be pulled from the docker hub as follows. The image takes up about 2 Gb when it is downloaded.
+
+`docker pull orbisys/bidsconvert:0.2`
+
 Open a terminal and run docker image as shown further below to convert dicoms in `$PWD/DICOM` to BIDS format in `$PWD/nifti` using the helper python program `bidsconvert.py`.
 
 This example creates bids files for subject `106` and for a session `post` thus creating the folder structure `sub-106 -> ses-post ->`
@@ -13,7 +17,6 @@ Additionally a bids action file can also be passed using `--bidsaction` - this i
 This functionality is under construction and provides support for copy operations only at the moment. 
 
 ```
-docker pull orbisys/bidsconvert:0.2
 docker run  --rm -v $PWD:/mnt                 \ 
                   -v $PWD/DICOM:/dicom        \
                   -v $PWD/nifti:/nifti        \
