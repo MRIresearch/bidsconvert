@@ -1,12 +1,12 @@
 # bidsconvert
-Docker image for converting DICOMS to BIDS format using dcm2bids version 2.1.4 (https://cbedetti.github.io/Dcm2Bids/)
+Docker image for converting DICOMS to BIDS format using dcm2bids version 2.1.4 (https://github.com/cbedetti/Dcm2Bids/)
 
 # Usage of bidsconvert.py
 Open a terminal and run docker image as shown further below to convert dicoms in `$PWD/DICOM` to BIDS format in `$PWD/nifti` using the helper python program `bidsconvert.py`.
 
 This example creates bids files for subject `106` and for a session `post` thus creating the folder structure `sub-106 -> ses-post ->`
 
-The BIDS configuration file is passed using `--bidsconfig`
+The BIDS configuration file is passed using `--bidsconfig` - an example of this file is available at https://cbedetti.github.io/Dcm2Bids/config/
 
 Additionally a bids action file can also be passed using `--bidsaction` - this is not part of the dcm2bids ecosystem and provides a means of copying files once they have been created to other folders within the bids structure.
 
